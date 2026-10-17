@@ -1,0 +1,180 @@
+-- Login screen: fields, buttons and their layout. The scale is set once on GlueParent.
+-- Texts come from the client's strings; MAINMENU is missing from 3.3.5, so it falls back to
+-- G.L.ACCOUNTLOGIN_MENU.
+
+local G = ForeverLogin
+local L = G.L
+local ui = AccountLoginUI
+local count = AccountLoginAccountEdit
+local password = AccountLoginPasswordEdit
+local loginButton = AccountLoginLoginButton
+local checkbox = AccountLoginSaveAccountName
+
+-- ------------------------------------------------------------ Footer
+
+local disclaimer
+for _, r in ipairs({ ui:GetRegions() }) do
+	if r:GetObjectType() == "FontString" and r:GetText() == BLIZZ_DISCLAIMER then
+		r:SetFontObject(G.Font("GlueFontNormalSmall"))
+		r:ClearAllPoints()
+		r:SetPoint("BOTTOM", ui, "BOTTOM", 0, 10)
+		disclaimer = r
+	end
+end
+AccountLoginVersion:SetFontObject(G.Font("GlueFontNormalSmall"))
+AccountLoginVersion:SetJustifyH("LEFT")
+AccountLoginVersion:ClearAllPoints()
+AccountLoginVersion:SetPoint("BOTTOMLEFT", ui, "BOTTOMLEFT", 10, 10)
+
+-- ------------------------------------------------------------ Fields
+
+-- Styles a login field. caption: its label; captionWidth: label width
+local function field(edit, caption, captionWidth)
+	edit:SetBackdrop(nil)
+	edit:SetWidth(320)
+	edit:SetHeight(50)
+	G.TooltipBackground(edit, "TooltipMixedLayout", G.GLUE_BACKDROP_COLOR, G.GLUE_BACKDROP_BORDER_COLOR)
+	edit:SetFontObject(G.Font("GlueLoginEditBoxFont"))
+	edit:SetTextInsets(12, 5, 0, 5)
+	caption:SetFontObject(G.Font("GlueFontNormalLogin"))
+	caption:SetJustifyH("CENTER")
+	caption:SetWidth(captionWidth)
+	caption:SetHeight(64)
+	caption:ClearAllPoints()
+	caption:SetPoint("BOTTOM", edit, "TOP", 0, -19)
+end
+
+local passwordCaption
+for _, r in ipairs({ password:GetRegions() }) do
+	if r:GetObjectType() == "FontString" and r:GetText() == PASSWORD then
+		passwordCaption = r
+	end
+end
+field(count, AccountLoginAccountEditLabel, 600)
+field(password, passwordCaption, 256)
+-- The 3.3.5 hint in the empty field, shown and hidden by the client itself:
+-- made invisible here.
+AccountLoginAccountEditFill:SetAlpha(0)
+
+-- ------------------------------------------------------------ Buttons
+
+G.ThreeSliceButton(loginButton, "128-RedButton", { "GlueFontNormalLogin", "GlueFontHighlightLogin", "GlueFontDisableLogin" })
+loginButton:SetWidth(250)
+loginButton:SetHeight(66)
+
+local quit = AccountLoginExitButton
+G.ThreeSliceButton(quit, "128-RedButton", { "GlueFontNormal", "GlueFontHighlight", "GlueFontDisable" })
+quit:SetWidth(200)
+quit:SetHeight(30)
+
+local create = G.CreateThreeSliceButton("ForeverLoginAccountLoginCreateAccountButton", ui, 200, 30, "128-RedButton",
+	{ "GlueFontNormal", "GlueFontHighlight", "GlueFontDisable" }, CREATE_ACCOUNT)
+create:SetScript("OnClick", function()
+	AccountLoginManageAccountButton:Click()
+end)
+
+local menu = G.CreateThreeSliceButton("ForeverLoginAccountLoginMenuButton", ui, 200, 30, "128-RedButton",
+	{ "GlueFontNormal", "GlueFontHighlight", "GlueFontDisable" }, L.ACCOUNTLOGIN_MENU)
+menu:SetScript("OnClick", function()
+	G.ShowMenu()
+end)
+
+-- Buttons absent from this screen: their functions go through the menu
+local HIDDEN = {
+	"AccountLoginTOSButton", "AccountLoginCreditsButton", "AccountLoginCinematicsButton",
+	"OptionsButton", "AccountLoginCommunityButton", "AccountLoginManageAccountButton",
+	"AccountLoginShowLauncher", "AccountLoginUpgradeAccountButton",
+}
+
+-- ------------------------------------------------------------ Check box
+
+local checkboxCaption = AccountLoginSaveAccountNameText
+checkboxCaption:SetFontObject(G.Font("GlueFontNormalLogin"))
+checkbox:SetWidth(28)
+checkbox:SetHeight(28)
+local block = CreateFrame("Frame", nil, ui)
+
+local function placeCheckbox()
+	-- ResizeLayoutFrame: check box at TOPLEFT, caption 2 to its right; the block is as wide
+	-- and tall as its content
+	local lw, lh = checkboxCaption:GetStringWidth(), checkboxCaption:GetStringHeight()
+	block:SetWidth(28 + 2 + lw)
+	block:SetHeight(math.max(28, lh))
+	block:ClearAllPoints()
+	block:SetPoint("BOTTOM", loginButton, "TOP", 0, 2)
+	checkbox:ClearAllPoints()
+	checkbox:SetPoint("TOPLEFT", block, "TOPLEFT")
+	checkboxCaption:ClearAllPoints()
+	checkboxCaption:SetPoint("LEFT", checkbox, "RIGHT", 2, 0)
+end
+
+-- ------------------------------------------------------------ Layout
+
+local function place()
+	count:ClearAllPoints()
+	count:SetPoint("CENTER", ui, "CENTER", 0, -15)
+	password:ClearAllPoints()
+	password:SetPoint("TOP", count, "BOTTOM", 0, -43)
+	loginButton:ClearAllPoints()
+	loginButton:SetPoint("TOP", password, "BOTTOM", 0, -50)
+	placeCheckbox()
+	quit:ClearAllPoints()
+	quit:SetPoint("BOTTOMRIGHT", ui, "BOTTOMRIGHT", -24, 56)
+	create:ClearAllPoints()
+	create:SetPoint("BOTTOM", quit, "TOP", 0, 10)
+	menu:ClearAllPoints()
+	menu:SetPoint("BOTTOM", create, "TOP", 0, 10)
+	for _, name in ipairs(HIDDEN) do
+		local f = _G[name]
+		if f then f:Hide() end
+	end
+	-- The launcher check box caption is a region of the screen frame
+	for _, r in ipairs({ ui:GetRegions() }) do
+		if r:GetObjectType() == "FontString" and r:GetText() == SHOW_LAUNCHER then
+			r:Hide()
+		end
+	end
+end
+place()
+
+-- Fade in over 0.75 s (AccountLoginUI FadeIn)
+local fade = CreateFrame("Frame", nil, ui)
+fade:Hide()
+fade:SetScript("OnUpdate", function(self, elapsed)
+	self.t = self.t + (elapsed or 0)
+	local k = math.min(1, self.t / 0.75)
+	ui:SetAlpha(k)
+	if k >= 1 then self:Hide() end
+end)
+
+-- On each show, after the client: AccountLogin_SetupAccountListDDL adds its own anchors to
+-- the password field and the button, and the client shows some of its buttons again
+G.Hook(AccountLogin, "OnShow", function()
+	place()
+end)
+
+-- On each show, after the client: its own fade (GlueFrameFadeIn with LOGIN_FADE_IN,
+-- 1.5 s, in AccountLoginUI's OnShow) would fight ours over the alpha, so the frame is
+-- removed from the client's fade list and only our fade remains.
+G.Hook(ui, "OnShow", function()
+	GlueFrameFadeRemoveFrame(ui)
+	fade.t = 0
+	ui:SetAlpha(0)
+	fade:Show()
+end)
+-- The client keeps its own fade-out (to character select); ours stops if still running
+G.HookFunction("GlueFrameFadeOut", function(frame)
+	if frame == ui then
+		fade:Hide()
+	end
+end)
+
+-- Escape keeps its 3.3.5 meaning (AccountLogin_OnKeyDown: quit the game) instead of
+-- opening the menu (TOGGLEGAMEMENU); the keyboard handling stays with the client.
+
+-- ------------------------------------------------------------ Short screens
+
+-- Blocks kept apart on a short screen (G.FitOnShow, after the OnShow above)
+G.FitOnShow(AccountLogin, function()
+	return { { count, password, block, loginButton, menu, create, quit, AccountLoginVersion, disclaimer } }
+end)

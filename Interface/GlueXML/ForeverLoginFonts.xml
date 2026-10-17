@@ -1,0 +1,1460 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+	<!-- Font objects used by the login screens; every inheritance chain is
+	     flattened so each entry is self-contained. -->
+	<Font name="ForeverLogin_CharCopyEditBoxFont" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_CharacterCreateTooltipFont" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_ChatFontNormal" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_ChatFontSmall" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_CombatLogFont" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_ConsoleFontNormal" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_ConsoleFontSmall" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_DialogButtonHighlightText" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_DialogButtonNormalText" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_EditBoxFont_25" font="Fonts\ARIALN.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="25"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_EditBoxFont_Large" font="Fonts\ARIALN.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_FactionName_Shadow_Huge" font="Fonts\MORPHEUS.ttf" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_FactionName_Shadow_Large" font="Fonts\MORPHEUS.ttf" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_FactionName_Shadow_Medium" font="Fonts\MORPHEUS.ttf" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_FriendsFont_11" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="11"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_FriendsFont_Large" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_FriendsFont_Normal" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_FriendsFont_Small" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_FriendsFont_UserText" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight><AbsValue val="11"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_Game10Font_o1" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_Game15Font_Shadow" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_Game16Font" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_Game17Font_Shadow" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="17"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_Game22Font" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="22"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_Game30Font" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="30"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_Game32Font_Shadow2" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="32"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_Game36Font_Shadow2" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="36"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_Game40Font_Shadow2" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="40"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_Game46Font_Shadow2" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="46"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_Game52Font_Shadow2" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="52"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_Game58Font_Shadow2" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="58"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_Game60Font" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="60"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_Game69Font_Shadow2" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="69"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_Game72Font" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="72"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_Game72Font_Shadow" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="72"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_GameFont72Highlight" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="72"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFont72HighlightShadow" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="72"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFont72Normal" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="72"/></FontHeight>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFont72NormalShadow" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="72"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontBlack" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontBlackMedium" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontBlackSmall" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontBlackSmall2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="11"/></FontHeight>
+		<Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontBlackTiny" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="9"/></FontHeight>
+		<Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontBlackTiny2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="8"/></FontHeight>
+		<Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontDarkGraySmall" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.3500" g="0.3500" b="0.3500" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontDisable" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontDisableHuge" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="20"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontDisableLarge" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontDisableLeft" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontDisableMed2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontDisableMed3" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontDisableOutline22" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="22"/></FontHeight>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontDisableSmall" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5020" g="0.5020" b="0.5020" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontDisableSmall2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="11"/></FontHeight>
+		<Color r="0.5020" g="0.5020" b="0.5020" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontDisableSmallLeft" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5020" g="0.5020" b="0.5020" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontDisableTiny" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="9"/></FontHeight>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontDisableTiny2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="8"/></FontHeight>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontGreen" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.0980" g="1.0000" b="0.0980" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontGreenSmall" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.1000" g="1.0000" b="0.1000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlight" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightCenter" font="Fonts\FRIZQT__.TTF" justifyH="CENTER" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightExtraSmall" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightExtraSmallLeft" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightExtraSmallLeftTop" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" justifyV="TOP" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightHuge" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="20"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightHuge2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="24"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightHugeOutline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="20"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightLarge" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightLarge2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightLeft" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightMed2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightMed2Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightMedium" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightOutline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightOutline22" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="22"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightRight" font="Fonts\FRIZQT__.TTF" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightShadowHuge2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="24"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightShadowOutline22" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="22"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="2" y="-2"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightSmall" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightSmall2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="11"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightSmallLeft" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightSmallLeftTop" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" justifyV="TOP" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightSmallOutline" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlightSmallRight" font="Fonts\FRIZQT__.TTF" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontHighlight_NoShadow" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormal" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalHuge" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="20"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalHuge2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="24"/></FontHeight>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalHuge2Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="24"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalHuge3" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="25"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalHuge3Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="25"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalHuge4" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="27"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalHuge4Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="27"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalHugeOutline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="20"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalLarge" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalLarge2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalLargeLeft" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalLargeLeftTop" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" justifyV="TOP" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalLargeOutline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalLeft" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalLeftBottom" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" justifyV="BOTTOM" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalLeftGreen" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.0000" g="1.0000" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalLeftGrey" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5020" g="0.5020" b="0.5020" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalLeftLightBlue" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5300" g="0.6700" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalLeftLightGreen" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.2500" g="0.7500" b="0.2500" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalLeftLightGrey" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.6000" g="0.6000" b="0.6000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalLeftOrange" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.5000" b="0.2500" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalLeftRed" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.9000" g="0.0000" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalLeftYellow" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalMed1" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="13"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalMed2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalMed2Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalMed3" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalMed3Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalOutline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalOutline22" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="22"/></FontHeight>
+		<Color r="1.0000" g="0.7800" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalShadowHuge2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="24"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalShadowOutline22" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="22"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="2" y="-2"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalSmall" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalSmall2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="11"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalSmallBattleNetBlueLeft" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5100" g="0.7730" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalSmallLeft" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalSmallOutline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalTiny" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="9"/></FontHeight>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalTiny2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="8"/></FontHeight>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalWTF2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="36"/></FontHeight>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormalWTF2Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="36"/></FontHeight>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontNormal_NoShadow" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontRed" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.1000" b="0.1000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontRedLarge" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.1000" b="0.1000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontRedSmall" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.1000" b="0.1000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontWhite" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontWhiteLarge" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontWhiteSmall" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontWhiteTiny" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="9"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameFontWhiteTiny2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="8"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameTooltipHeader" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_GameTooltipHeaderText" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameTooltipText" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GameTooltipTextSmall" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueEditBoxFont" font="Fonts\ARIALN.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontBlack" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontCharacterCreate" font="Fonts\FRIZQT__.TTF" outline="NORMAL" spacing="1.5" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontDisable" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5020" g="0.5020" b="0.5020" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontDisableExtraSmall" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5020" g="0.5020" b="0.5020" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontDisableHuge" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="22"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="2" y="-2"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontDisableLarge" font="Fonts\FRIZQT__.TTF" outline="NORMAL" spacing="2" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontDisableLeft" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5020" g="0.5020" b="0.5020" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontDisableLogin" font="Fonts\FRIZQT__.TTF" outline="NORMAL" spacing="2" virtual="true">
+		<FontHeight><AbsValue val="25"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontDisableSmall" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontDisableSmallLeft" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontGreen" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.1000" g="1.0000" b="0.1000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontGreenSmall" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.1000" g="1.0000" b="0.1000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontHighlight" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontHighlightExtraSmall" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontHighlightExtraSmallLeft" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontHighlightExtraSmallLeftTop" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" justifyV="TOP" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontHighlightHuge" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="22"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="2" y="-2"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontHighlightLarge" font="Fonts\FRIZQT__.TTF" outline="NORMAL" spacing="2" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontHighlightLeft" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontHighlightLogin" font="Fonts\FRIZQT__.TTF" outline="NORMAL" spacing="2" virtual="true">
+		<FontHeight><AbsValue val="25"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontHighlightSmall" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontHighlightSmallLeft" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontHighlightSmallLeftTop" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" justifyV="TOP" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontLightYellow" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.9600" b="0.6200" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontLightYellowSmall" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.9600" b="0.6200" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontNormal" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontNormalExtraSmall" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontNormalExtraSmallLeft" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontNormalGigantor" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="32"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="2" y="-2"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.7800" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontNormalHuge" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="22"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="2" y="-2"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.7800" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontNormalLarge" font="Fonts\FRIZQT__.TTF" outline="NORMAL" spacing="2" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontNormalLeft" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontNormalLogin" font="Fonts\FRIZQT__.TTF" outline="NORMAL" spacing="2" virtual="true">
+		<FontHeight><AbsValue val="25"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontNormalSmall" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.7800" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontNormalSmallLeft" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.7800" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontRed" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.1000" b="0.1000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontRedSmall" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.1000" b="0.1000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontWhite" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueFontYellow" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueLoginEditBoxFont" font="Fonts\ARIALN.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="25"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_GlueNumberFontNormal" font="Fonts\ARIALN.TTF" outline="THICK" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_IMEHighlight" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_IMENormal" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_LFGActivityEntry" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_LFGActivityEntryDifficult" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.5000" b="0.2500" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_LFGActivityEntryTrivial" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_LFGActivityHeader" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.7000" g="0.7000" b="0.7000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_MovieSubtitleFont" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="22"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="2" y="-2"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_Number14FontGray" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_Number14FontWhite" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_NumberFontNormal" font="Fonts\ARIALN.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_NumberFontNormalLarge" font="Fonts\ARIALN.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_NumberFontNormalLargeRight" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_NumberFontNormalLargeRightGray" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Color r="0.6000" g="0.6000" b="0.6000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_NumberFontNormalLargeRightGreen" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Color r="0.0980" g="1.0000" b="0.0980" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_NumberFontNormalLargeRightRed" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Color r="1.0000" g="0.1255" b="0.1255" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_NumberFontNormalLargeRightYellow" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Color r="1.0000" g="0.8196" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_NumberFontNormalRight" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_NumberFontNormalRightGray" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Color r="0.6000" g="0.6000" b="0.6000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_NumberFontNormalRightGreen" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Color r="0.0980" g="1.0000" b="0.0980" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_NumberFontNormalRightRed" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Color r="1.0000" g="0.1255" b="0.1255" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_NumberFontNormalRightYellow" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Color r="1.0000" g="0.8196" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_NumberFontNormalSmall" font="Fonts\ARIALN.TTF" outline="THICK" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_NumberFontNormalSmallGray" font="Fonts\ARIALN.TTF" outline="THICK" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Color r="0.6000" g="0.6000" b="0.6000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_NumberFontNormalYellow" font="Fonts\ARIALN.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Color r="1.0000" g="0.8196" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_NumberFont_Normal_Med" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_NumberFont_OutlineThick_Med1" font="Fonts\ARIALN.TTF" outline="THICK" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_NumberFont_OutlineThick_Med2" font="Fonts\ARIALN.TTF" outline="THICK" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_NumberFont_Outline_Large" font="Fonts\ARIALN.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_NumberFont_Outline_Large2" font="Fonts\ARIALN.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="20"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_NumberFont_Outline_Med" font="Fonts\ARIALN.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_NumberFont_Shadow_Large" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight><AbsValue val="20"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_NumberFont_Shadow_Med" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_NumberFont_Shadow_Small" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_NumberFont_Shadow_Tiny" font="Fonts\ARIALN.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_ObjectiveFont" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" justifyV="TOP" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.8000" g="0.8000" b="0.8000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_OptionsFont" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_OptionsFontHighlight" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_OptionsFontHighlightSmall" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_OptionsFontHighlightSmallLeft" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_OptionsFontHighlightSmallLeftTop" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" justifyV="TOP" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_OptionsFontLarge" font="Fonts\FRIZQT__.TTF" outline="NORMAL" spacing="2" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="2" y="-2"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.7800" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_OptionsFontLeft" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_OptionsFontSmall" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_OptionsFontSmallLeft" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_QuestDifficulty_Difficult" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_QuestDifficulty_Header" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.7000" g="0.7000" b="0.7000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_QuestDifficulty_Impossible" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.1255" b="0.1255" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_QuestDifficulty_Standard" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.2510" g="0.7529" b="0.2510" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_QuestDifficulty_Trivial" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5020" g="0.5020" b="0.5020" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_QuestDifficulty_VeryDifficult" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.5020" b="0.2510" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_QuestFont" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="13"/></FontHeight>
+		<Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_QuestFontHighlightHuge" font="Fonts\MORPHEUS.ttf" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_QuestFontNormalHuge" font="Fonts\MORPHEUS.ttf" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_QuestFontNormalLarge" font="Fonts\MORPHEUS.ttf" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_QuestFont_30" font="Fonts\MORPHEUS.ttf" virtual="true">
+		<FontHeight><AbsValue val="30"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_QuestFont_39" font="Fonts\MORPHEUS.ttf" virtual="true">
+		<FontHeight><AbsValue val="39"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_QuestFont_Huge" font="Fonts\MORPHEUS.ttf" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_QuestFont_Large" font="Fonts\MORPHEUS.ttf" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_QuestFont_Shadow_Huge" font="Fonts\MORPHEUS.ttf" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.4900" g="0.3500" b="0.0500" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_QuestTitleFont" font="Fonts\MORPHEUS.ttf" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.4900" g="0.3500" b="0.0500" a="1.0000"/></Shadow>
+		<Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_RealmCharactersNormal" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.1000" g="1.0000" b="0.1000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_RealmDownHighlight" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.8000" g="0.8000" b="0.8000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_RealmDownNormal" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_RealmInvalidHighlight" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_RealmInvalidNormal" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.1000" b="0.1000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_RealmNoCharactersNormal" font="Fonts\FRIZQT__.TTF" outline="NORMAL" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.7800" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_System15Font" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_System15Font_Shadow" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont16_Shadow_ThickOutline" font="Fonts\ARIALN.TTF" outline="THICK" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont18_Shadow_ThickOutline" font="Fonts\ARIALN.TTF" outline="THICK" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont22_Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="22"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont22_Shadow_Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="22"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="2" y="-2"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont22_Shadow_ThickOutline" font="Fonts\ARIALN.TTF" outline="THICK" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Huge2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="24"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Huge4" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="27"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Large" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Large2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Med1" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Med2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="13"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Med3" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Outline_Med1" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Outline_Med2" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Outline_Slug_Huge2" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="24"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Outline_Slug_Large2" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Outline_WTF2" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="36"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Huge1" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="20"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Huge1_Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="20"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Huge2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="24"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Huge2_Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="24"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Huge3" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="25"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Huge4" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="27"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Huge4_Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="27"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Large" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Large2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Large2_Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Large_Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Med1" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Med1_Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Med2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Med2_Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Med3" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Med3_Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Outline_Gigantor" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="32"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="2" y="-2"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Outline_Huge3" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="25"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Outline_Large" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Outline_Login" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="25"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Outline_Small" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Small" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Small2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="11"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Small2_Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="11"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Shadow_Small_Outline" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Small" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Small2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="11"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Tiny" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="9"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_Tiny2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="8"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_WTF2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="36"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_World" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="64"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_SystemFont_World_ThickOutline" font="Fonts\FRIZQT__.TTF" outline="THICK" virtual="true">
+		<FontHeight><AbsValue val="64"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_System_IME" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_TOSFont" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_Tooltip_Med" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_Tooltip_Small" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+	</Font>
+	<Font name="ForeverLogin_UserScaledChatFontNormal" font="Fonts\ARIALN.TTF" justifyH="LEFT" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontBody" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" justifyV="TOP" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontGame15Shadow" font="Fonts\FRIZQT__.ttf" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontGameDisable" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5000" g="0.5000" b="0.5000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontGameDisableSmall" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5020" g="0.5020" b="0.5020" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontGameHighlight" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontGameHighlightLarge" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontGameHighlightRight" font="Fonts\FRIZQT__.TTF" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontGameHighlightSmall" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontGameNormal" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="12"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontGameNormalLarge" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontGameNormalMed2" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="1" y="-1"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8200" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontGameNormalSmall" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontGlueDisable" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="0.5020" g="0.5020" b="0.5020" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontGlueHighlight" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontGlueNormal" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontGlueNormalExtraSmall" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+		<FontHeight><AbsValue val="10"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontGlueNormalLarge" font="Fonts\FRIZQT__.TTF" outline="NORMAL" spacing="2" virtual="true">
+		<FontHeight><AbsValue val="18"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="0.8235" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontHeader" font="Fonts\FRIZQT__.TTF" justifyH="LEFT" justifyV="TOP" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontNumberNormalRight" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Color r="1.0000" g="1.0000" b="1.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontNumberNormalRightGray" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Color r="0.6000" g="0.6000" b="0.6000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontNumberNormalRightGreen" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Color r="0.0980" g="1.0000" b="0.0980" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontNumberNormalRightRed" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Color r="1.0000" g="0.1255" b="0.1255" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontNumberNormalRightYellow" font="Fonts\ARIALN.TTF" outline="NORMAL" justifyH="RIGHT" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Color r="1.0000" g="0.8196" b="0.0000" a="1.0000"/>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontSystem15Shadow" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="15"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontSystem_Body" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="14"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+	<Font name="ForeverLogin_UserScaledFontSystem_Header" font="Fonts\FRIZQT__.TTF" virtual="true">
+		<FontHeight><AbsValue val="16"/></FontHeight>
+		<Shadow><Offset><AbsDimension x="0" y="0"/></Offset><Color r="0.0000" g="0.0000" b="0.0000" a="1.0000"/></Shadow>
+	</Font>
+</Ui>

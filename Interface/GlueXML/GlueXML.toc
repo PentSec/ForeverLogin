@@ -1,0 +1,39 @@
+##DebugHook.lua
+GlueStrings.lua
+GlueFonts.xml
+GlueFontStyles.xml
+GlueLocalization.xml
+## add new files after here
+
+GlueBasicControls.xml
+GlueParent.xml
+GlueButtons.xml
+GlueTemplates.xml
+GlueDialog.xml
+GlueDropDownMenu.xml
+GlueTooltip.xml
+GlueSplash.xml
+# RealmList.xml: replaced by ForeverLoginRealmList.lua (our own realm list screen)
+AddonList.xml
+AccountLogin.xml
+CharacterSelect.xml
+CharacterCreate.xml
+PatchDownload.xml
+MovieFrame.xml
+RealmWizard.xml
+CreditsFrame.xml
+SecurityMatrix.xml
+OptionsFrameTemplates.xml
+OptionsPanelTemplates.xml
+TrialConvert.xml
+VideoOptionsFrame.xml
+VideoOptionsPanels.xml
+AudioOptionsFrame.xml
+AudioOptionsPanels.xml
+OptionsSelect.xml
+##CameraSelect.xml
+## ForeverLogin: the reworked login screens
+ForeverLogin.xml
+
+## This Always Runs Last, Add New Items above it.
+GlueLocalizationPost.xml

@@ -1,0 +1,30 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+	<!-- ForeverLogin: the reworked login screens. Loaded after the whole
+	     original GlueXML (GlueXML.toc). -->
+	<Include file="ForeverLoginFonts.xml"/>
+	<Script file="ForeverLoginTexts.lua"/>
+	<Script file="ForeverLoginTexts_enUS.lua"/>
+	<Script file="ForeverLoginTexts_frFR.lua"/>
+	<Script file="ForeverLoginTexts_deDE.lua"/>
+	<Script file="ForeverLoginTexts_esES.lua"/>
+	<Script file="ForeverLoginTexts_ruRU.lua"/>
+	<Script file="ForeverLoginAtlas.lua"/>
+	<Script file="ForeverLoginData.lua"/>
+	<Script file="ForeverLoginColors.lua"/>
+	<Script file="ForeverLoginChoices.lua"/>
+	<Script file="ForeverLogin.lua"/>
+	<Script file="ForeverLoginTemplates.lua"/>
+	<Script file="ForeverLoginMenu.lua"/>
+	<Script file="ForeverLoginDialogs.lua"/>
+	<Script file="ForeverLoginAccountLogin.lua"/>
+	<Script file="ForeverLoginCharacterSelect.lua"/>
+	<Script file="ForeverLoginCharacterCreate.lua"/>
+	<Script file="ForeverLoginRealmList.lua"/>
+	<Script file="ForeverLoginAddonList.lua"/>
+	<Script file="ForeverLoginDropDown.lua"/>
+	<Script file="ForeverLoginOptions.lua"/>
+	<Script file="ForeverLoginIllustrations.lua"/>
+	<Script file="ForeverLoginCinematics.lua"/>
+	<Script file="ForeverLoginCredits.lua"/>
+</Ui>
