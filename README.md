@@ -1,5 +1,8 @@
-# ForeverLogin
+<div align="center">
+ <img width="1440" height="720" alt="image" src="https://github.com/user-attachments/assets/5775920a-cf1e-402f-9c81-f11004ba111f" />
 
+# ForeverLogin
+</div>
 A hand built replacement for the World of Warcraft 3.3.5a client interface - both
 the glue screens you see before the game and the windows inside it. Login, realm
 list, character select and creation, the addon list, options, credits and
