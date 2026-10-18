@@ -1,9 +1,10 @@
 # ForeverLogin
 
-A hand built replacement for the World of Warcraft 3.3.5a glue interface - the
-screens you see before the game. Login, realm list, character select and
-creation, the addon list, options, credits and cinematics, drawn as a single
-addon on top of the client's own `GlueXML`.
+A hand built replacement for the World of Warcraft 3.3.5a client interface - both
+the glue screens you see before the game and the windows inside it. Login, realm
+list, character select and creation, the addon list, options, credits and
+cinematics, plus the Esc menu, the video, sound and interface options and the key
+bindings, all drawn over the client's own `GlueXML` and `FrameXML`.
 
 ## What it is
 
@@ -55,11 +56,17 @@ The client's `RealmList.xml` is no longer loaded: its frame is ours.
 
 | Path | Contents |
 | --- | --- |
-| `Interface/GlueXML/` | The screens, the shared base, the atlas table and the texts |
-| `Interface/ForeverLogin/` | The texture pack: 172 `.blp` in the client's folder structure |
+| `Interface/GlueXML/` | The login screens, the shared base, the atlas table and the texts |
+| `Interface/FrameXML/` | The in game windows (Esc menu, options, key bindings) and the toc they are listed in |
+| `Interface/ForeverLogin/` | The texture pack: the `.blp` files, in the client's folder structure |
 
 The texture pack is part of the project, not an optional download: the screens
 draw every panel, button and icon from it.
+
+Nothing here is an addon. The client's `GlueXML` and `FrameXML` are loaded from
+`Interface/GlueXML` and `Interface/FrameXML` at startup, and both toc files list
+the client's own files first and ours at the end: the screens replace art and
+hooks, and never appear in the addon list, because there is no addon.
 
 ## How it works
 

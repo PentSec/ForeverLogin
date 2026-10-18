@@ -248,4 +248,5 @@ ForeverLogin.atlas = {
 	["realmlist-ring-off"] = { "interface\\ForeverLogin\\glues\\glues-realmlist-ring-off", 0.000000, 0.625000, 0.000000, 0.625000, 160, 160, false, false, nil },
 	["realmlist-swords"] = { "interface\\ForeverLogin\\glues\\glues-realmlist-swords", 0.000000, 0.718750, 0.000000, 0.671875, 46, 43, false, false, nil },
 	["realmlist-anvil"] = { "interface\\ForeverLogin\\glues\\glues-realmlist-anvil", 0.000000, 1.000000, 0.000000, 1.000000, 64, 64, false, false, nil },
+	["ui-silver-button-select"] = { "interface\\ForeverLogin\\buttons\\ui-silver-button-select", 0.000000, 1.000000, 0.000000, 1.000000, 128, 32, false, false, nil },
 }
