@@ -69,6 +69,8 @@ function B.Skin()
 	end
 	local skin = G.Window(win, KeyBindingFrameHeaderText:GetText())
 	skin.stripes:Hide()
+	-- the window moves by its title bar
+	G.Movable(f, skin.container)
 	f.foreverSkin = skin
 	KeyBindingFrameHeaderText:SetAlpha(0)
 	-- close acts as Cancel, which is what Escape does

@@ -890,6 +890,39 @@ function G.Box(f)
 	return f
 end
 
+-- ---------- Moving a window
+
+-- Lets one of our frames drag a client window. The handle is enabled for the mouse and gives the
+-- window the drag; the client re-centers its windows every time they are shown, so the place it
+-- was left at is remembered and put back on show. The window is also marked as user placed, which
+-- is how the client saves it with the layout for the next session.
+function G.Movable(window, handle)
+	window:SetMovable(true)
+	window:SetClampedToScreen(true)
+	window:SetUserPlaced(true)
+	handle:EnableMouse(true)
+	handle:RegisterForDrag("LeftButton")
+	handle:SetScript("OnDragStart", function()
+		window:StartMoving()
+	end)
+	handle:SetScript("OnDragStop", function()
+		window:StopMovingOrSizing()
+		-- after this the window has a real anchor: keep it to put the window back on show
+		local point, relativeTo, relativePoint, x, y = window:GetPoint(1)
+		window.foreverPlace = { point = point, relativeTo = relativeTo, relativePoint = relativePoint, x = x, y = y }
+	end)
+	G.Hook(window, "OnShow", function(self)
+		local p = self.foreverPlace
+		if p and p.point then
+			self:SetUserPlaced(false)
+			self:ClearAllPoints()
+			self:SetPoint(p.point, p.relativeTo or UIParent, p.relativePoint or p.point, p.x, p.y)
+			self:SetUserPlaced(true)
+		end
+	end)
+	return handle
+end
+
 -- ---------- Options list and tabs
 
 -- Repaints one category row: our selection and hover (the client's own glow is gone), the

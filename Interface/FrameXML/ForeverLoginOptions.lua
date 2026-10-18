@@ -76,6 +76,8 @@ function O.Window(f, rightButtons, default, lists)
 	win:SetAllPoints(f)
 	local skin = G.Window(win, title and title:GetText())
 	skin.stripes:Hide()
+	-- the window moves by its title bar
+	G.Movable(f, skin.container)
 	f.foreverSkin = skin
 	-- The close button hides the window (HideUIPanel) instead of running the client's cancel
 	-- code, which would taint the CVars and the UI variables it rewrites: a change that is not
