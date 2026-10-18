@@ -94,18 +94,45 @@ checkbox:SetWidth(28)
 checkbox:SetHeight(28)
 local block = CreateFrame("Frame", nil, ui)
 
+local savePassword = AccountLoginSavePassword
+local savePasswordCaption = AccountLoginSavePasswordText
+-- GAP between the two check box rows; ABOVE from the password field to the block
+local GAP, ABOVE = 4, 20
+
+-- ResizeLayoutFrame: check box at TOPLEFT, caption 2 to its right, the password check box
+-- (when the client shows it) a row below; the block is as wide and tall as its content. The
+-- block hangs from the password field and the login button follows it, so the button drops
+-- while the password check box is shown.
 local function placeCheckbox()
-	-- ResizeLayoutFrame: check box at TOPLEFT, caption 2 to its right; the block is as wide
-	-- and tall as its content
 	local lw, lh = checkboxCaption:GetStringWidth(), checkboxCaption:GetStringHeight()
+	local rowH = math.max(28, lh)
 	block:SetWidth(28 + 2 + lw)
-	block:SetHeight(math.max(28, lh))
+	block:SetHeight(rowH)
+	if savePassword and savePassword:IsShown() then
+		local plw, plh = savePasswordCaption:GetStringWidth(), savePasswordCaption:GetStringHeight()
+		block:SetWidth(math.max(block:GetWidth(), 28 + 2 + plw))
+		block:SetHeight(rowH + GAP + math.max(28, plh))
+		savePassword:ClearAllPoints()
+		savePassword:SetPoint("TOPLEFT", block, "TOPLEFT", 0, -(rowH + GAP))
+		savePasswordCaption:ClearAllPoints()
+		savePasswordCaption:SetPoint("LEFT", savePassword, "RIGHT", 2, 0)
+	end
 	block:ClearAllPoints()
-	block:SetPoint("BOTTOM", loginButton, "TOP", 0, 2)
+	block:SetPoint("TOP", password, "BOTTOM", 0, -ABOVE)
+	loginButton:ClearAllPoints()
+	loginButton:SetPoint("TOP", block, "BOTTOM", 0, -2)
 	checkbox:ClearAllPoints()
 	checkbox:SetPoint("TOPLEFT", block, "TOPLEFT")
 	checkboxCaption:ClearAllPoints()
 	checkboxCaption:SetPoint("LEFT", checkbox, "RIGHT", 2, 0)
+end
+
+if savePassword then
+	savePassword:SetWidth(28)
+	savePassword:SetHeight(28)
+	savePasswordCaption:SetFontObject(G.Font("GlueFontNormalLogin"))
+	G.Hook(savePassword, "OnShow", placeCheckbox)
+	G.Hook(savePassword, "OnHide", placeCheckbox)
 end
 
 -- ------------------------------------------------------------ Layout
@@ -115,8 +142,6 @@ local function place()
 	count:SetPoint("CENTER", ui, "CENTER", 0, -15)
 	password:ClearAllPoints()
 	password:SetPoint("TOP", count, "BOTTOM", 0, -43)
-	loginButton:ClearAllPoints()
-	loginButton:SetPoint("TOP", password, "BOTTOM", 0, -50)
 	placeCheckbox()
 	quit:ClearAllPoints()
 	quit:SetPoint("BOTTOMRIGHT", ui, "BOTTOMRIGHT", -24, 56)
