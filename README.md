@@ -2,6 +2,21 @@
  <img width="1440" height="720" alt="image" src="https://github.com/user-attachments/assets/5775920a-cf1e-402f-9c81-f11004ba111f" />
 
 # ForeverLogin
+
+<details>
+<summary>Click for previews</summary>
+
+Account login, realm list, addon list, and the windows inside the game.
+
+<img src="preview/login.png" alt="Account login" width="49%">
+
+<img src="preview/realmlist.png" alt="Realm list" width="49%">
+
+<img src="preview/addonlist.png" alt="Addon list" width="49%">
+
+<img src="preview/ingame.png" alt="In game windows" width="49%">
+
+</details>
 </div>
 A hand built replacement for the World of Warcraft 3.3.5a client interface - both
 the glue screens you see before the game and the windows inside it. Login, realm
@@ -83,6 +98,7 @@ install guide from [Project Reforged](https://projectreforged.github.io/wotlk/do
 | `Interface/GlueXML/` | The login screens, the shared base, the atlas table and the texts |
 | `Interface/FrameXML/` | The in game windows (Esc menu, options, key bindings) and the toc they are listed in |
 | `Interface/ForeverLogin/` | The texture pack: the `.blp` files, in the client's folder structure |
+| `preview/` | The screenshots shown at the top of this README |
 
 The texture pack is part of the project, not an optional download: the screens
 draw every panel, button and icon from it.
