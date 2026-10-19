@@ -8,7 +8,12 @@
 	<Script file="ForeverLoginTexts_frFR.lua"/>
 	<Script file="ForeverLoginTexts_deDE.lua"/>
 	<Script file="ForeverLoginTexts_esES.lua"/>
+	<Script file="ForeverLoginTexts_esMX.lua"/>
 	<Script file="ForeverLoginTexts_ruRU.lua"/>
+	<Script file="ForeverLoginTexts_ptBR.lua"/>
+	<Script file="ForeverLoginTexts_zhCN.lua"/>
+	<Script file="ForeverLoginTexts_zhTW.lua"/>
+	<Script file="ForeverLoginTexts_koKR.lua"/>
 	<Script file="ForeverLoginAtlas.lua"/>
 	<Script file="ForeverLoginData.lua"/>
 	<Script file="ForeverLoginColors.lua"/>
