@@ -24,7 +24,7 @@ realm connecting and the movie list all stay under the client's control.
 
 | Screen | What it does |
 | --- | --- |
-| Account login | Fields, buttons, layout, and the menu button the 3.3.5 client does not have |
+| Account login | Fields, the saved accounts dropdown, and the menu button the 3.3.5 client does not have |
 | **Realm list** | A realm list built from scratch (see below) |
 | Character select | A scrolling list of our own character cards; 3.3.5 has none |
 | Character create | Step 1 picks race, class and body, step 2 customizes and names |
@@ -33,6 +33,22 @@ realm connecting and the movie list all stay under the client's control.
 | Credits | Over the client's credits text and music, with key art per expansion |
 | Cinematics | The client's movies, newest first, three columns on one page |
 | Main menu | The glue screens' menu, with a veil that blocks the screen behind |
+
+### The login screen
+
+The client's own saved account list dropdown is replaced by ours, between the
+account and the password fields:
+
+- every account logged into is kept, newest first, up to eight, each with its
+  password when "remember password" was ticked
+- picking an account fills both fields; picking one while a check box that
+  matters is unticked says so first, above the account field, naming the box to
+  tick
+- the list is the client's own saved account list, the `accountList` CVar of
+  `Config.wtf`, so it survives restarts; a glue screen cannot register a CVar of
+  its own
+- with nothing saved the dropdown stays away and the fields close up, the way
+  the client does with its own list
 
 ### The realm list
 
@@ -55,6 +71,11 @@ The client's `RealmList.xml` is no longer loaded: its frame is ours.
   classic glue interface. The screens are written against the 3.3.5 API and the
   client's own glue strings, so no extra libraries are needed.
 
+## HD textures
+
+The screens have been tested with the latest HD texture pack for 3.3.5 and the
+install guide from [Project Reforged](https://projectreforged.github.io/wotlk/downloads/).
+
 ## Repository layout
 
 | Path | Contents |
@@ -74,12 +95,13 @@ hooks, and never appear in the addon list, because there is no addon.
 ## How it works
 
 - **The atlas table.** `ForeverLoginAtlas.lua` maps the name of every piece the
-  screens use to its file, its texcoords and its size - 244 entries - so a
+  screens use to its file, its texcoords and its size - 245 entries - so a
   texture is placed exactly as the client places its own atlases, without
   depending on the client having one.
 - **The texts.** Where the client has a string, that string is used. Everything
-  else lives in `ForeverLoginTexts.lua` and its `deDE`, `enUS`, `esES`, `frFR`
-  and `ruRU` files, with English as the fallback, so nothing is hardcoded.
+  else lives in `ForeverLoginTexts.lua` and a file per client locale - `deDE`,
+  `enUS`, `esES`, `esMX`, `frFR`, `koKR`, `ptBR`, `ruRU`, `zhCN` and `zhTW` -
+  with English as the fallback, so nothing is hardcoded.
 - **The scale.** The glue area is scaled from the screen height and the screens
   are laid out in reference units. A fitting pass on each screen grows the
   reference height when blocks would overlap on a short screen.
