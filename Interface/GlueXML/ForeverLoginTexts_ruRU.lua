@@ -5,6 +5,10 @@ ForeverLogin.AddTexts("ruRU", {
 	-- ForeverLoginAccountLogin.lua
 	ACCOUNTLOGIN_MENU = "Меню",
 
+	-- ForeverLoginAccounts.lua
+	ACCOUNTLOGIN_DROPS_ACCOUNT = "При входе эта учётная запись исчезнет из списка сохранённых. Включите «%s», чтобы сохранить её.",
+	ACCOUNTLOGIN_DROPS_PASSWORD = "При входе сохранённый пароль будет забыт. Включите «%s», чтобы сохранить его.",
+
 	-- ForeverLogin.lua
 	GLUE_ERROR_MISSING_ATLAS = "элемент атласа отсутствует в таблице экранов входа: ",
 	GLUE_ERROR_MISSING_FONT = "отсутствует шрифт ForeverLogin: ",

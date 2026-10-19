@@ -5,6 +5,10 @@ ForeverLogin.AddTexts("deDE", {
 	-- ForeverLoginAccountLogin.lua
 	ACCOUNTLOGIN_MENU = "Menü",
 
+	-- ForeverLoginAccounts.lua
+	ACCOUNTLOGIN_DROPS_ACCOUNT = "Beim Anmelden verschwindet dieses Konto aus den gespeicherten Konten. \"%s\" aktivieren, um es zu behalten.",
+	ACCOUNTLOGIN_DROPS_PASSWORD = "Beim Anmelden geht das gespeicherte Passwort verloren. \"%s\" aktivieren, um es zu behalten.",
+
 	-- ForeverLogin.lua
 	GLUE_ERROR_MISSING_ATLAS = "Atlas-Element fehlt in der Tabelle der Anmeldebildschirme: ",
 	GLUE_ERROR_MISSING_FONT = "ForeverLogin-Schriftart fehlt: ",

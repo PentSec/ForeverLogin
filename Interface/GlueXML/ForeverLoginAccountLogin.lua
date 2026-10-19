@@ -9,6 +9,10 @@ local count = AccountLoginAccountEdit
 local password = AccountLoginPasswordEdit
 local loginButton = AccountLoginLoginButton
 local checkbox = AccountLoginSaveAccountName
+-- the saved accounts dropdown and its warning, built by ForeverLoginAccounts.lua (loaded before
+-- this file)
+local dropdown = G.Accounts.DropDown
+local notice = G.Accounts.Notice
 
 -- ------------------------------------------------------------ Footer
 
@@ -84,6 +88,8 @@ local HIDDEN = {
 	"AccountLoginTOSButton", "AccountLoginCreditsButton", "AccountLoginCinematicsButton",
 	"OptionsButton", "AccountLoginCommunityButton", "AccountLoginManageAccountButton",
 	"AccountLoginShowLauncher", "AccountLoginUpgradeAccountButton",
+	-- the client's own saved account list, replaced by our dropdown
+	"AccountLoginDropDown",
 }
 
 -- ------------------------------------------------------------ Check box
@@ -140,8 +146,20 @@ end
 local function place()
 	count:ClearAllPoints()
 	count:SetPoint("CENTER", ui, "CENTER", 0, -15)
+	-- The accounts warning (ForeverLoginAccounts.lua) sits at the top of the stack, over the
+	-- account label, so showing it grows upwards and moves nothing else. The label box is 64
+	-- tall with its text centred, so 32 clears the glyphs.
+	notice:ClearAllPoints()
+	notice:SetPoint("BOTTOM", count, "TOP", 0, 32)
 	password:ClearAllPoints()
-	password:SetPoint("TOP", count, "BOTTOM", 0, -43)
+	if dropdown:IsShown() then
+		dropdown:ClearAllPoints()
+		dropdown:SetPoint("TOP", count, "BOTTOM", 0, -6)
+		password:SetPoint("TOP", dropdown, "BOTTOM", 0, -32)
+	else
+		-- nothing saved: the stack closes up as if the dropdown were not there
+		password:SetPoint("TOP", count, "BOTTOM", 0, -43)
+	end
 	placeCheckbox()
 	quit:ClearAllPoints()
 	quit:SetPoint("BOTTOMRIGHT", ui, "BOTTOMRIGHT", -24, 56)
@@ -201,5 +219,5 @@ end)
 
 -- Blocks kept apart on a short screen (G.FitOnShow, after the OnShow above)
 G.FitOnShow(AccountLogin, function()
-	return { { count, password, block, loginButton, menu, create, quit, AccountLoginVersion, disclaimer } }
+	return { { count, dropdown, password, block, G.Accounts.Notice, loginButton, menu, create, quit, AccountLoginVersion, disclaimer } }
 end)

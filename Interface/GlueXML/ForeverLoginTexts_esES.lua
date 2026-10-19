@@ -5,6 +5,10 @@ ForeverLogin.AddTexts("esES", {
 	-- ForeverLoginAccountLogin.lua
 	ACCOUNTLOGIN_MENU = "Menú",
 
+	-- ForeverLoginAccounts.lua
+	ACCOUNTLOGIN_DROPS_ACCOUNT = "Si entras ahora, esta cuenta se borra de las cuentas guardadas. Marca \"%s\" para conservarla.",
+	ACCOUNTLOGIN_DROPS_PASSWORD = "Si entras ahora, se olvida la contraseña guardada de esta cuenta. Marca \"%s\" para conservarla.",
+
 	-- ForeverLogin.lua
 	GLUE_ERROR_MISSING_ATLAS = "falta un elemento del atlas en la tabla glue: ",
 	GLUE_ERROR_MISSING_FONT = "falta la fuente ForeverLogin: ",

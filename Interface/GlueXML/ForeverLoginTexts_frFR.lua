@@ -5,6 +5,10 @@ ForeverLogin.AddTexts("frFR", {
 	-- ForeverLoginAccountLogin.lua
 	ACCOUNTLOGIN_MENU = "Menu",
 
+	-- ForeverLoginAccounts.lua
+	ACCOUNTLOGIN_DROPS_ACCOUNT = "En vous connectant, ce compte quitte la liste des comptes enregistrés. Cochez « %s » pour le garder.",
+	ACCOUNTLOGIN_DROPS_PASSWORD = "En vous connectant, le mot de passe enregistré sera oublié. Cochez « %s » pour le garder.",
+
 	-- ForeverLogin.lua
 	GLUE_ERROR_MISSING_ATLAS = "Élément d'atlas absent de la table des écrans d'accueil : ",
 	GLUE_ERROR_MISSING_FONT = "Police ForeverLogin absente : ",

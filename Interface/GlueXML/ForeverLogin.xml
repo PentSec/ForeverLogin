@@ -17,12 +17,13 @@
 	<Script file="ForeverLoginTemplates.lua"/>
 	<Script file="ForeverLoginMenu.lua"/>
 	<Script file="ForeverLoginDialogs.lua"/>
+	<Script file="ForeverLoginDropDown.lua"/>
+	<Script file="ForeverLoginAccounts.lua"/>
 	<Script file="ForeverLoginAccountLogin.lua"/>
 	<Script file="ForeverLoginCharacterSelect.lua"/>
 	<Script file="ForeverLoginCharacterCreate.lua"/>
 	<Script file="ForeverLoginRealmList.lua"/>
 	<Script file="ForeverLoginAddonList.lua"/>
-	<Script file="ForeverLoginDropDown.lua"/>
 	<Script file="ForeverLoginOptions.lua"/>
 	<Script file="ForeverLoginIllustrations.lua"/>
 	<Script file="ForeverLoginCinematics.lua"/>

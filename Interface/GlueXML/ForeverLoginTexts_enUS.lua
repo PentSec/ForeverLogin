@@ -5,6 +5,10 @@ ForeverLogin.AddTexts("enUS", {
 	-- ForeverLoginAccountLogin.lua
 	ACCOUNTLOGIN_MENU = "Menu",
 
+	-- ForeverLoginAccounts.lua
+	ACCOUNTLOGIN_DROPS_ACCOUNT = "Logging in now drops this account from the saved list. Tick \"%s\" to keep it.",
+	ACCOUNTLOGIN_DROPS_PASSWORD = "Logging in now forgets this account's saved password. Tick \"%s\" to keep it.",
+
 	-- ForeverLogin.lua
 	GLUE_ERROR_MISSING_ATLAS = "atlas element missing from the glue table: ",
 	GLUE_ERROR_MISSING_FONT = "ForeverLogin font missing: ",
