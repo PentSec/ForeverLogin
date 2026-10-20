@@ -255,10 +255,30 @@ if rememberPassword then
 	G.Hook(rememberPassword, "OnClick", warn)
 end
 
+-- Some 3.3.5 clients (the one this screen was built on) have their own saved password and
+-- keep it in this same CVar: their AccountLogin_OnShow puts the whole accountList value in the
+-- password field, so with our records there the field would hold "name|pass;name|pass" (cut to
+-- the field's length) and the login would send that as the password. When the field holds
+-- what the client copied in, it is put back to the password of the account in the account
+-- field. A client that clears the field leaves it alone.
+local function restore()
+	if #accounts == 0 then
+		return
+	end
+	local raw = read() or ""
+	local text = password:GetText() or ""
+	if raw == "" or text == "" or text ~= string.sub(raw, 1, string.len(text)) then
+		return
+	end
+	local account = inField()
+	password:SetText(account and account.password or "")
+end
+
 -- On each show, after the client has filled the fields and built its own list: ours is read
--- back and the dropdown follows the field.
+-- back, the password field is cleaned of the client's own fill and the dropdown follows it.
 G.Hook(AccountLogin, "OnShow", function()
 	load()
+	restore()
 	refresh()
 end)
 
