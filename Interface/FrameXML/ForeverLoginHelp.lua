@@ -44,37 +44,7 @@ end
 
 -- A field of the client: its Common-Input-Border pieces go, a dark fill and our border stay.
 local function skinEdit(e)
-	if e.foreverHelpEdit then
-		return e
-	end
-	-- A field that is the scroll child of a scroll frame scrolls with its own text: a border
-	-- drawn on it would scroll away, so it keeps the frame it is in.
-	local parent = e:GetParent()
-	if parent and parent.GetObjectType and parent:GetObjectType() == "ScrollFrame" then
-		return e
-	end
-	e.foreverHelpEdit = true
-	local name = e:GetName()
-	for _, suffix in ipairs({ "Left", "Middle", "Right" }) do
-		local piece = name and _G[name .. suffix]
-		if piece then
-			piece:SetAlpha(0)
-		end
-	end
-	-- the multi line boxes draw their border as named pieces of their own
-	for _, r in ipairs({ e:GetRegions() }) do
-		if r:GetObjectType() == "Texture" then
-			local file = r:GetTexture()
-			if type(file) == "string" and string.find(string.lower(file), "common%-input%-border") then
-				r:SetAlpha(0)
-			end
-		end
-	end
-	local fill = e:CreateTexture(nil, "BACKGROUND")
-	fill:SetTexture(0, 0, 0, 0.35)
-	fill:SetAllPoints(e)
-	G.Border(e)
-	return e
+	return G.EditBox(e)
 end
 
 -- A divider of the client: its three pieces go and a hair line takes their place.

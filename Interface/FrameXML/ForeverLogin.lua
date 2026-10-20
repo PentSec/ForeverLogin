@@ -936,6 +936,43 @@ function G.Box(f)
 	return f
 end
 
+-- A field of the client (InputBoxTemplate, and the chat input border of the popups): its own
+-- border pieces go, a dark fill and our tooltip border stay. A field that is the scroll child of
+-- a scroll frame keeps its frame: a border drawn on it would scroll away.
+function G.EditBox(e)
+	if not e or e.foreverEdit then
+		return e
+	end
+	local parent = e:GetParent()
+	if parent and parent.GetObjectType and parent:GetObjectType() == "ScrollFrame" then
+		return e
+	end
+	e.foreverEdit = true
+	local name = e:GetName()
+	for _, suffix in ipairs({ "Left", "Middle", "Right", "TopLeft", "TopRight", "BottomLeft", "BottomRight", "Top", "Bottom" }) do
+		local piece = name and _G[name .. suffix]
+		if piece then
+			piece:SetAlpha(0)
+		end
+	end
+	for _, r in ipairs({ e:GetRegions() }) do
+		if r:GetObjectType() == "Texture" then
+			local file = r:GetTexture()
+			if type(file) == "string" then
+				file = string.lower(file)
+				if string.find(file, "common%-input%-border") or string.find(file, "chatinputborder") then
+					r:SetAlpha(0)
+				end
+			end
+		end
+	end
+	local fill = e:CreateTexture(nil, "BACKGROUND")
+	fill:SetTexture(0, 0, 0, 0.35)
+	fill:SetAllPoints(e)
+	G.Border(e)
+	return e
+end
+
 -- ---------- Moving a window
 
 -- Lets one of our frames drag a client window. The handle is enabled for the mouse and gives the

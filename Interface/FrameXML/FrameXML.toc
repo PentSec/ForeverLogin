@@ -144,8 +144,9 @@ AlternatePowerBar.xml
 AnimationSystem.lua
 
 ## add new modules above here
-# ForeverLogin: the client's own windows (menu, options, key bindings, macros, help) in its own
-# style. They go last on purpose: they hook the frames and the functions the client builds above.
+# ForeverLogin: the client's own windows (menu, options, key bindings, macros, help, popups) in
+# its own style. They go last on purpose: they hook the frames and the functions the client
+# builds above.
 ForeverLoginAtlas.lua
 ForeverLogin.lua
 ForeverLoginGameMenu.lua
@@ -153,5 +154,6 @@ ForeverLoginBindings.lua
 ForeverLoginDropDown.lua
 ForeverLoginOptions.lua
 ForeverLoginHelp.lua
+ForeverLoginStaticPopup.lua
 
 LocalizationPost.xml
