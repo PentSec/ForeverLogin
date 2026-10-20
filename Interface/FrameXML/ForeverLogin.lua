@@ -851,6 +851,52 @@ function G.Interior(host, f, list)
 	return rect
 end
 
+-- The same element as a plain box, for a window with one pane and no category list (the
+-- Knowledge Base): the corners and the bands keep their size and everything between them
+-- stretches. The middle takes the list zone of the element, which is the one that meets the left
+-- corner; the separator (199-201) is left out so it does not smear.
+function G.ContentBox(host, target)
+	local e = G.atlas["options_innerframe"]
+	local du, dv = (e[3] - e[2]) / e[6], (e[5] - e[4]) / e[7]
+	-- the corners of the element, and the list zone (29-199) as the middle: the separator
+	-- (199-201) stays out so stretching does not smear it
+	local cols = { { 0, 29 }, { 29, 199 }, { 857, 886 } }
+	local ranks = { { 0, 82 }, { 82, 451 }, { 451, 618 } }
+	local left, right = 29, 886 - 857
+	local top, bottom = 82, 618 - 451
+	local pieces = {}
+	for c = 1, 3 do
+		for r = 1, 3 do
+			local t = host:CreateTexture(nil, "ARTWORK")
+			t:SetTexture(e[1])
+			t:SetTexCoord(e[2] + cols[c][1] * du, e[2] + cols[c][2] * du,
+				e[4] + ranks[r][1] * dv, e[4] + ranks[r][2] * dv)
+			if c == 1 then
+				t:SetPoint("LEFT", target, "LEFT", 0, 0)
+				t:SetWidth(left)
+			elseif c == 3 then
+				t:SetPoint("RIGHT", target, "RIGHT", 0, 0)
+				t:SetWidth(right)
+			else
+				t:SetPoint("LEFT", target, "LEFT", left, 0)
+				t:SetPoint("RIGHT", target, "RIGHT", -right, 0)
+			end
+			if r == 1 then
+				t:SetPoint("TOP", target, "TOP", 0, 0)
+				t:SetHeight(top)
+			elseif r == 3 then
+				t:SetPoint("BOTTOM", target, "BOTTOM", 0, 0)
+				t:SetHeight(bottom)
+			else
+				t:SetPoint("TOP", target, "TOP", 0, -top)
+				t:SetPoint("BOTTOM", target, "BOTTOM", 0, bottom)
+			end
+			pieces[#pieces + 1] = t
+		end
+	end
+	return pieces
+end
+
 -- ---------- Group box
 
 -- Our tooltip border over a frame, in the grey the client uses (0.4) and with no fill, as the

@@ -21,8 +21,9 @@ Account login, realm list, addon list, and the windows inside the game.
 A hand built replacement for the World of Warcraft 3.3.5a client interface - both
 the glue screens you see before the game and the windows inside it. Login, realm
 list, character select and creation, the addon list, options, credits and
-cinematics, plus the Esc menu, the video, sound and interface options and the key
-bindings, all drawn over the client's own `GlueXML` and `FrameXML`.
+cinematics, plus the Esc menu, the video, sound and interface options, the key
+bindings and the Help and Knowledge Base windows, all drawn over the client's
+own `GlueXML` and `FrameXML`.
 
 ## What it is
 
@@ -96,7 +97,7 @@ install guide from [Project Reforged](https://projectreforged.github.io/wotlk/do
 | Path | Contents |
 | --- | --- |
 | `Interface/GlueXML/` | The login screens, the shared base, the atlas table and the texts |
-| `Interface/FrameXML/` | The in game windows (Esc menu, options, key bindings) and the toc they are listed in |
+| `Interface/FrameXML/` | The in game windows (Esc menu, options, key bindings, help) and the toc they are listed in |
 | `Interface/ForeverLogin/` | The texture pack: the `.blp` files, in the client's folder structure |
 | `preview/` | The screenshots shown at the top of this README |
 
