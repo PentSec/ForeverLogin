@@ -281,8 +281,20 @@ local function createCard(n)
 	return c
 end
 
+-- A card per slot, all built here. cardAt also builds one on demand: a client whose
+-- slot constant is raised after this file loads would otherwise leave arrange() with a
+-- slot that has no card (it indexed nil there).
+local function cardAt(i)
+	local c = state.maps[i]
+	if not c then
+		c = createCard(i)
+		state.maps[i] = c
+	end
+	return c
+end
+
 for i = 1, MAX_CHARACTERS_DISPLAYED do
-	state.maps[i] = createCard(i)
+	cardAt(i)
 end
 
 -- GetCharacterInfo returns localized race and class, mapped back to tokens below.
@@ -405,9 +417,11 @@ local function arrange()
 	local n = 0
 	state.visibleCount = {}
 	for i = 1, MAX_CHARACTERS_DISPLAYED do
-		local c = state.maps[i]
+		local c = cardAt(i)
 		local name = i <= GetNumCharacters() and GetCharacterInfo(i)
 		if name then
+			-- A card built here (the slot count grew after the list was populated) is empty.
+			if c.index ~= i then populateCard(c, i) end
 			n = n + 1
 			state.visibleCount[n] = c
 		else
@@ -578,7 +592,7 @@ hideClient()
 G.HookFunction("UpdateCharacterList", function()
 	hideClient()
 	for i = 1, math.min(GetNumCharacters(), MAX_CHARACTERS_DISPLAYED) do
-		populateCard(state.maps[i], i)
+		populateCard(cardAt(i), i)
 	end
 	-- Create Character stays in place; grayed when no slot is free
 	create:Show()
